@@ -69,16 +69,16 @@
                 When I first started working out a large emphasis was placed on the form, but there existed very few personal items to ensure this. I was also learning OpenCV at the time so I thought to create an app that could do just that. 
                  </p>
             <br>
-            <p>The program works by Identifying body parts and their relative location on the screen using Google's Machine Learning Mediapipe library. From there I found the relative angle and coordinate system of each joint in relation to another. That information could then be used to detect the user's form and notifies the user on how to correct it to follow the selected action.</p>
+            <p>The program works by identifying body parts and their relative location on the screen using Google's Machine Learning Mediapipe library. From there I found the relative angle and coordinate system of each joint in relation to another. That information could then be used to detect the user's form and notifies the user on how to correct it to follow the selected action.</p>
             <h5>Setting up MediaPipe and OpenCV</h3>
-            <p>First, I started by using OpenCv, a computer vision library, which can access the webcam and create text and images on to the video feed. So far I have it displaying video from my webcam and creating a rectagle in the corner of the screen for future use.  </p>
+            <p>First, I started by using OpenCV, a computer vision library, which can access the webcam and create text and images on to the video feed. So far I have it displaying video from my webcam and creating a rectagle in the corner of the screen for future use.  </p>
             <img src="WorkoutApp/OpenCVbasic.PNG" class="smallImage">
             <p>Then with some more code I set up Mediapipe, connected the feed to it, and created the joints.</p>
             <img src="WorkoutApp/mediapipecodebasic.PNG" class="smallImage">
             <img src="WorkoutApp/Mediapipebasic.PNG" class="smallerImage">
             <h5>Getting the data</h5>
             <img src="WorkoutApp/pose_tracking_full_body_landmarks.png" class="smallImage">
-            <p>The pose feature on Mediapipe can track all these points on the body and provides 4 data points for each of the 31 points. The x,y, and z coordinate as well as the visibility of a point. So for the data of the wrist point I recieved.</p>
+            <p>The pose feature on Mediapipe can track all these points on the body and provides 4 data points for each of the 31 points. The x, y, and z coordinate as well as the visibility of a point. So for the data of the wrist point I recieved.</p>
             <p>x: 0.6215062141418457
 
                 </p>
@@ -94,18 +94,19 @@
             <img src="WorkoutApp/adjustedM.PNG" class="smallImage">
             <p>With this information I have everything I need to determin the kind of pose that is made by looking at the interval around pose's data to see if the current data matches with it.</p>
             <h5>Pose Detection</h5>
-            <p>From here I wanted to create 2 basic models for different poses a squat and a push up. I could keep creating new ones, but it was repetative and boring so I decided to create a machine learning program to learn everyother pose.</p>
+            <p>From here I wanted to create 2 basic models for different poses a squat and a push up. I could keep creating new ones, but it was repetative and boring so I decided to create a machine learning program in the future to learn every other pose.</p>
             <h5>Determining the correct pose</h5>
-            <p>At first I decided to create a basic model for a squat becuase it is a relativly simple motion and basic parameters that confirm it is done. Once the user selects this option the side with the best visibily is constantly chosen to create the measuremnt so they can be the most accurate at any time.</p>
+            <p>At first I decided to create a basic model for a squat becuase it is a relativly simple motion and basic parameters that confirm it is done. Once the user selects this option the side with the best visibily is constantly chosen to create the measurement so they can be the most accurate at any time.</p>
             <img src="WorkoutApp/cpose1.PNG" class="smallImage">
             <p>This next piece of code uses the angle of the knee to find out if a person is in the up or down position.</p>
             <img src="WorkoutApp/cpose2.PNG" class="smallImage">
-            <p>Then if it is up it compares the x distance between the heel landmarks to that of the shoulders and eyes. If it is above or below a certain threshold it marks what is wring on the screen and shows a message.</p>
+            <p>Then if it is up it compares the x distance between the heel landmarks to that of the shoulders and eyes. If it is above or below a certain threshold it marks what is wrong on the screen and shows a message.</p>
             <img src="WorkoutApp/cpos3.PNG" class="smallImage">
-            <p>It then does the same thing when its is in the "down" position and tests for banck angle and how far the knees are bent. To alert the user of any problems that joint is highlighted and a message stays on the scree until it is fixed.</p>
+            <p>It then does the same thing when it's is in the "down" position and tests for back angle and how far the knees are bent. To alert the user of any problems that joint is highlighted and a message stays on the scree until it is fixed.</p>
             <img src="WorkoutApp/cpos4.PNG" class="smallImage">
             <p>The code for the push up is almost the exact same with new angle positions and messages.</p>
             <img src="WorkoutApp/pushUppos.PNG" class="smallImage">
+            <p>This is how it looks when it is working</p>
             <h5>ML For New Poses</h5>
             <p>Creating more poses is generally simple, but I did not want to keep coding the same thing over and over and I could never code every single workout so I decided to create a machine learning model to do the work for me. </p>
             <br>

@@ -101,7 +101,7 @@ nav{
     margin-left: 10%;
 }
 body{
-    background-image: linear-gradient(#a5b2cfd8, #ffffffd8);
+    background-image: linear-gradient(#a3a3a37e, #ddddddd8);
     overflow-x:hidden;
 }
 .front{
@@ -185,7 +185,7 @@ body{
     border-style: solid;
 }
 .main{
-    background-color: #333a568f;
+    background-color: #52658fe1;
     border-radius: 45px;
     width: 80%;
     margin-left: 10%;
