@@ -131,18 +131,22 @@ body{
 }
 .introBody p{
     position: static;
-    font-size: 30px;
+    font-size: 28px;
     padding: 20px;
     line-height:2em;
+    padding-top: 50px;
 }
 .introBody a{
     position: absolute;
     text-decoration: none;
     color: white;
-    padding: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #333a56;
     top: 45%;
-    left: 11%;
+    left: 11.5%;
 }
 .introBody a:hover{
     background-color:#F7f5e6 ;
