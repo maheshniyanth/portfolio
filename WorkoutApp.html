@@ -70,6 +70,8 @@
                  </p>
             <br>
             <p>The program works by identifying body parts and their relative location on the screen using Google's Machine Learning Mediapipe library. From there I found the relative angle and coordinate system of each joint in relation to another. That information could then be used to detect the user's form and notifies the user on how to correct it to follow the selected action.</p>
+            <br>
+            <p>I later created a Machine Learning program that can get data from any set of movements, detect what part of the movement the user is in, and predict the correct form. This machine learning code is not just limited to this project becuase it can be used to predict and dettect the accuracy of any constant movement.</p>
             <h5>Setting up MediaPipe and OpenCV</h3>
             <p>First, I started by using OpenCV, a computer vision library, which can access the webcam and create text and images on to the video feed. So far I have it displaying video from my webcam and creating a rectagle in the corner of the screen for future use.  </p>
             <img src="WorkoutApp/OpenCVbasic.PNG" class="smallImage">
@@ -128,11 +130,18 @@
             <img src="WorkoutApp/Static.PNG" class="smallImage">
             <p>I found which the rows had the max and mean. I used an interval of the rows because the values around 10 away from a value stay consistent and I needed as many accurate data points as I could get for the machine learning set. I then used the interval number column that I created before to assign the values that match the interval as max or min. </p>
             <img src="WorkoutApp/listMinMax.PNG" class="smallImage">
+            <p>Then I exported all the data labled as max and all the data labeled as min seperatly to then add to the machine learning model.</p>
+            <img src="WorkoutApp/ML1.PNG" class="smallImage">
+            <p>I choose to use a random forest model because it works the best with larger data sets and was the most accurate out of the ones I tested. I then ran trained the model and saved it to use in a future part.</p>
+            <img src="WorkoutApp/ML2.PNG" class="smallImage">
             <h6>Predicting Poses</h6>
             <p>The message goes through all of the angles labeled as static and compares it with the current angle measure. If they do not match it highlights the joint and creates a message based on the part.</p>
             <img src="WorkoutApp/StaticMessage.PNG" class="smallImage">
             <p>The next nofication checks the main angle ( the one with the greatest change) and makes sure that it is around the max or min when the action is in the up or down position.</p>
             <img src="WorkoutApp/notifyMinMax.PNG" class="smallImage">
+            <p>With the accuracy of the current coordinates compared to the predicted ML model I create new rows to test if it improves it. The new row alters a non-static angle by increasing or decreasing it by 5 and checking if the accuracy improves. If it does then a message is created to have the user move to that location and the joint is highlighted.  </p>
+            <img src="WorkoutApp/angleProb.PNG" class="smallImage">
+            <p>In this video I had to simplyfy parts of the code and do a simple action to reduce the time of the output.</p>
             <br>
             <br>
             <br>
