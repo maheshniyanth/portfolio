@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        /* width */
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+        
+        /* Track */
+    ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 8px grey; 
+          background: #52658f71; 
+        }
+         
+        /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #333a56be; 
+        }
+        
+        /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #52658fa2; 
+    }
+    </style>
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="individualProj.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"  />
+<script src="https://kit.fontawesome.com/8058eb5cf7.js" crossorigin="anonymous"></script>
+    <title>Porfolio</title>
+    <link rel="shortcut icon" href="icon2.png" type="image/x-icon">
+</head>
+
+    <body>
+        <nav>
+            <div class="Name">
+                <h4>Niyanth Mahesh</h4>
+            </div>
+            <ul class="Catagories">
+                <div class="home"> <li><a class="mainNav" href = "index.html">Home</a></li></div>
+                <div class="Projects">
+                    <li><a class="active" class="mainNav" href = "#">Projects <span class="arrow">&#x2193</span></a></li>
+                    <div class="dropdown">   
+                        <ul>
+                            <li><a href="MechanicalDesign.html">Mechanical Design</a></li>
+                            <li><a href="aiMachinelearning.html">AI/Machine Learning</a></li>
+                            <div class="electrical"><li><a href="electonics.html">Electronics</a></li></div>
+                        </ul>
+                    </div>
+                </div>
+                <li><a href = "contact.html" class="mainNav" >Contact</a></li>
+            </ul>
+            <div class="mobile">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="main2">
+            <h3>Electromyography Based Instrument / Rythm Game</h3>
+            <img src="OMBFullPic.PNG" alt="Full View" class="oneImage">
+            <h5  style="margin-top: 50px">Introduction</h5>
+            <p>I first saw the surface electromyography sensors used in a prostetic arm and I was amazed with the functionality that it could provide. Since then I have been interested in doing something with them. I also really love rythm games, so I came up with a concept for the first audio only rythm game using the EMG pads.
+            </p>
+            <p>It works by using several EMG fitted into a wearable sleave that goes on the forearm. It detects the taps of each of the fingers. It then connects via Bluetooth to a device where the app would allow the user to select the song and calabrate the device (I dont have the time to learn the basics of app development for this project so I will just upload the programmed songs on to the sleave). The sound will then come from device.</p>
+            <p>The user will know what to do based on varying notes played in the audio indcating what finger to use as well as shorthand standing for a variety of things such as repeating a set note pattern or holding a note.</p>
+            <p>The main apeal of this would be its portability. The lack of screen allows the user to play it discreatly anywhere without looking away from what they are doing. </p>
+            <img src="diagram.png" class="smallImage">
+            <h5>Research</h5>
+            <p>I knew very little about these sensors other than the fact that they were impresise at tracking finger movement, so I had a lot of reasarch ahead of me.</p>
+            <br>
+            <br>
+            <br>
+            <a class="button button1" href="MechanicalDesign.html">Mechanical Design</a>
+            <a class="button button2" href="aiMachinelearning.html" >AI Mechanical Engineering</a>
+            <a class="button button3" href="electonics.html">Electronics</a>
+        </div>
+        <footer>
+            <div class="footer">
+                <h3>Porfolio</h3>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p> copyright &copy;2021 Niyanth Mahesh Porfolio. designed by Niyanth Mahesh</p>
+            </div>
+        </footer>
+        <script src="app.js">
+
+        </script>
+    </body>
+</html>

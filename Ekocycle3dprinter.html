@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        /* width */
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+        
+        /* Track */
+    ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 8px grey; 
+          background: #52658f71; 
+        }
+         
+        /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #333a56be; 
+        }
+        
+        /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #52658fa2; 
+    }
+    </style>
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="individualProj.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"  />
+<script src="https://kit.fontawesome.com/8058eb5cf7.js" crossorigin="anonymous"></script>
+    <title>Porfolio</title>
+    <link rel="shortcut icon" href="icon2.png" type="image/x-icon">
+</head>
+
+    <body>
+        <nav>
+            <div class="Name">
+                <h4>Niyanth Mahesh</h4>
+            </div>
+            <ul class="Catagories">
+                <div class="home"> <li><a class="mainNav" href = "index.html">Home</a></li></div>
+                <div class="Projects">
+                    <li><a class="active" class="mainNav" href = "#">Projects <span class="arrow">&#x2193</span></a></li>
+                    <div class="dropdown">   
+                        <ul>
+                            <li><a href="MechanicalDesign.html">Mechanical Design</a></li>
+                            <li><a href="aiMachinelearning.html">AI/Machine Learning</a></li>
+                            <div class="electrical"><li><a href="electonics.html">Electronics</a></li></div>
+                        </ul>
+                    </div>
+                </div>
+                <li><a href = "contact.html" class="mainNav" >Contact</a></li>
+            </ul>
+            <div class="mobile">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="main2">
+            <h3>Ekocycle 3d Printer Rebuilt</h3>
+            <img src="3dprinterEko/main.jpg" alt="Full View" class="oneImage">
+            <h5  style="margin-top: 50px">Introduction</h5>
+            <p>My brother picked up a broken EkoCycle 3d printer. We decided to fix it so we would have a working 3D printer to use on projects.
+            </p>
+        	<p>The EkoCycle Cube came out in 2014 for $1200. Its claim to fame was the 20% recycled filament that it used. However, it was soon after discontinued due to several reasons. The first was that it required the use of its custom filament that was prone to jamming the nozzle and was expensive. The second was that it was really loud. </p>
+            <div class="noIn"> 
+                <p> Three major things needed to be done:</p>
+                <p>1. Fix the printer by replacing the electronics.</p>
+                <p>2. Switch out the extruder and tip so I don't need to rely on the recycled filament and can use PLA.  </p>
+                <p>3. Make it upgradable by switching out the main controller for an Arduino so I can add my own components. </p>
+            </div>    
+            <h6>Dismanteling the Printer</h6>
+            <img src="3dprinterEko/tear.jpg" class="smallImage">
+            <p>The outer plastic frame and electronics were taken off producing a high-quality working aluminum frame. I didn't try to alter anything past this point because everything here was working perfectly. All of the electronic components were taken off other than the stepper motors which still seemed to work. </p>
+            <h5>Filling the Holes</h5>
+            <p>With all the older parts gone I had to replace them with more universal parts. Starting with the switches.</p>
+            <img src="3dprinterEko/switch1.jpg" class="smallImage">
+            <img src="3dprinterEko/switch2.jpg" class="smallImage">
+            <img src="3dprinterEko/switch3.jpg" class="smallImage">
+            <p>Then the feeder.</p>
+            <img src="3dprinterEko/feeder.jpg" class="smallImage">
+            <p>The extruder </p>
+            <img src="3dprinterEko/xintruder.jpg" class="smallImage">
+            <p>And finally the cooling for the extruder tip and part.</p>
+            <img src="3dprinterEko/fan.jpg" class="smallImage">
+            <h5>Electronics</h5>
+            <img src="3dprinterEko/circut.jpg" class="smallImage">
+            <p>Im using an Arduino Mega, Ramp 1.4 board, DRV8825 Stepper Driver Module, and this power supply I found. The Ramps board made it easy to connect all of the limit switches, fans, and stepper motors to one point. The 1/32 stepping the module also resulted in quieter printing.  </p>
+            <img src="3dprinterEko/power.jpg" class="smallImage">
+            <h5>Code</h5>
+            <img src="3dprinterEko/curaSetup.PNG" class="smallImage">
+            <p>I set up the basic initialization in Cura and adjusted the bed height to the correct amount.</p>
+            <h5>Testing it out</h5>
+            <p></p>
+            <br>
+            <br>
+            <br>
+            <a class="button button1" href="MechanicalDesign.html">Mechanical Design</a>
+            <a class="button button2" href="aiMachinelearning.html" >AI Mechanical Engineering</a>
+            <a class="button button3" href="electonics.html">Electronics</a>
+        </div>
+        <footer>
+            <div class="footer">
+                <h3>Porfolio</h3>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p> copyright &copy;2021 Niyanth Mahesh Porfolio. designed by Niyanth Mahesh</p>
+            </div>
+        </footer>
+        <script src="app.js">
+
+        </script>
+    </body>
+</html>

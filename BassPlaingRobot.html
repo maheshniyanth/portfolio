@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        /* width */
+    ::-webkit-scrollbar {
+        width: 15px;
+    }
+        
+        /* Track */
+    ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 8px grey; 
+          background: #52658f71; 
+        }
+         
+        /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #333a56be; 
+        }
+        
+        /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #52658fa2; 
+    }
+    </style>
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="individualProj.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"  />
+<script src="https://kit.fontawesome.com/8058eb5cf7.js" crossorigin="anonymous"></script>
+    <title>Porfolio</title>
+    <link rel="shortcut icon" href="icon2.png" type="image/x-icon">
+</head>
+
+    <body  onmousedown="return false" onselectstart="return false">
+        <nav>
+            <div class="Name">
+                <h4>Niyanth Mahesh</h4>
+            </div>
+            <ul class="Catagories">
+                <div class="home"> <li><a class="mainNav" href = "index.html">Home</a></li></div>
+                <div class="Projects">
+                    <li><a class="active" class="mainNav" href = "#">Projects <span class="arrow">&#x2193</span></a></li>
+                    <div class="dropdown">   
+                        <ul>
+                            <li><a href="MechanicalDesign.html">Mechanical Design</a></li>
+                            <li><a href="aiMachinelearning.html">AI/Machine Learning</a></li>
+                            <div class="electrical"><li><a href="electonics.html">Electronics</a></li></div>
+                        </ul>
+                    </div>
+                </div>
+                <li><a href = "contact.html" class="mainNav" >Contact</a></li>
+            </ul>
+            <div class="mobile">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <div class="main2">
+            <h3>Bass Playing Robot</h3>
+            <img src="bass/newfull.PNG" alt="Full View" class="oneImage">
+            <img src="bass/fullUp.jpg" alt="Full View" class="largeImage">
+            <h5  style="margin-top: 50px">Introduction</h5>
+            <p>I had a bass that I was never that good at playing so, I was inspired to do something about it. Rather than spending time learning how to play it, I decided to build a robot to do it for me. <br> </p>
+            <img src="bass/fullside.PNG"  class="largeImage">
+            <p>The bass-playing robot works by sliding this carriage across the neck using a rail system similar to a 3d printer. The four fingers are each connected to a separate rail system which allows them to move individually across the frets. A finger plays a note when the attached solenoid activates hitting the string.<br></p>
+            <h5>Designing</h5>
+            <h6>The Rail System</h6>
+            <img src="bass/rail1.jpg" class="largeImage">
+            <p>The two rail pieces on the front and back of the bass and are strapped in to avoid damaging the bass. They each hold the pipes and pulleys which operate the timing belt. The timing belt then moves the carriage across the neck with the PVC pipe guiding it. </p>
+            <p>I chose to use PVC pipe for the railing because it was cheap ($5 for 10 ft) and was lighter than any alternative that I knew of. One downside is that the smallest PVC pipe I could buy at the hardware store is 0.5in which makes the overall design extrude too far from the base</p>
+            <h6>The Body Pulley</h6>
+            <img src="bass/backpully1.PNG"  class="largeImage">
+            <p>This part is strapped onto the body of the bass. It holds one end of the pipe and timing belt to create the rail. </p>
+            <img src="bass/back.jpg"  class="smallImage">
+            <p>note: the 3d printer I'm using is a previously broken printer that I rebuilt. As a result, the print quality is not as good as it can be.</p>
+            <p>The three arches hold belts which allows this to attach to the bass with velcro-type straps (I am currently using duct tape because I don't want to buy the straps). I am also using a Nema 17 stepper motor to run the 6mm timing belt.</p>
+            <img src="bass/backpully2.PNG"  class="smallImage">
+            <h6>The Head Pulley</h6>
+            <img src="bass/toppully1.PNG"  class="largeImage">
+            <p>This part holds the pipe and timing belt in the other direction. It has slots to adjust the distance between the pipes.</p>
+            <img src="bass/top.jpg"  class="smallImage">
+            <p>I also found out that the body of a mechanical pencil has the exact diameter of the 8mm axle I needed. So, after shaving the hexagonal sides with an X-Acto knife I used it as a replacement because I could not buy a metal axle that size.</p>
+            <img src="bass/toppully2.PNG"  class="smallImage">
+            <h6>Main Carrage</h6>
+            <img src="bass/centercar.PNG"  class="largeImage">
+            <p>The main carriage holds the fingers and sides across the PVC railings.</p>
+            <img src="bass/mainstr.PNG"  class="smallImage">
+            <p>The neck of the bass widens as it reaches the body so the main structure is splintered into similar parts that can expand and change their angle. The black component in the center holds the timing belts which allows the main carriage to move across the railing. </p>
+            <img src="bass/IMG_20220809_231329.jpg"  class="smallImage">
+            <p>I put a rod through the center to prevent the structure from getting too slanted which can mess up which notes are being played. The slant is caused by the slight imperfections caused from my 3D printer.</p>
+            <img src="bass/rods.PNG"  class="smallImage">
+            <p>This then holds up the main set of pullies that the fingers are built on. This system uses timing belts to move the fingers across the slot.</p>
+            <img src="bass/pull.PNG"  class="smallImage">
+            <img src="bass/slidecenter.jpg"  class="smallImage">
+            <img src="bass/IMG_20220809_231422.jpg"  class="smallImage">
+            <p>The black structure on the finger holds it at that height and keeps the circular finger angled in the proper direction.</p>
+            <img src="bass/fingercloseup.PNG"  class="smallerImage">
+            <img src="bass/fingerpic2.PNG"  class="smallImage">
+            <p>The dark grey parts attached to each of the solanoid rods press the strings. The width of the neck starts at 1.75in and ends at 2.5in, so the strings are not always in the same position. I solved this problem by making the  dark grey bit 0.625in long to press the string any distance apart. </p>
+            <img src="bass/fingerouter.PNG"  class="smallImage">
+            <img src="bass/sideview1.jpg"  class="smallImage">
+            <img src="bass/bottom1.jpg"  class="smallImage">
+            <h6>Old Finger Design</h6>
+            <img src="bass/oldfingers.PNG"  class="largeImage">
+            <p>I've gone through several versions, but this one was my favorite till I realized how weak the solenoids were too weak to move the fingers so I had to switch to the new version. I wanted the solenoids to lift fingers, but I realized I could cut out the extra parts and make the solenoids the fingers.</p>
+            <h5>Electronics</h5>
+            <img src="bass/IMG_20220814_123330.jpg"  class="largeImage">
+            <p>I have 3 components that I needed to control. The 5 stepper motors control the pulleys, the 5 limit switches control the stepper motor positions, and the 4 solenoids press each string. </p>
+            <p>I am using 12v 5N solenoids along with the RFP30N06LE transistors, 1k ohm resistors, and diodes. </p>
+            <p>The 1.5N Nema 17 stepper motors with the DRV8825 Stepper Motor Driver (can do 1/32 steps) and the RAMPS 1.4 Control Panel </p>
+            <img src="bass/bassfullpicutre.jpg"  class="largeImage">
+            <p class="bottomText">Wires</p>
+            <h5>Code</h5>
+            <p>Most of the code for this was simple. I just struggled with perfecting the position for each fret.</p>
+            <img src="bass/code1.PNG"  class="smallImage">
+            <img src="bass/code2.PNG"  class="smallImage">
+            <p>These snips make the main carriage travel to the end to record its position. It works just like the homing of a 3D printer. It was the cheaper and easier alternative to using encoders. It then goes to the first fret and stops.  </p>
+            <img src="bass/limitswitch.jpg"  class="smallImage">
+            <p class="bottomText">This is the limit switch</p>
+            <p>I then do the same for each of the fingers. I am running them individually to prevent them from causing each other to mess up.</p>
+            <img src="bass/code3.PNG"  class="smallImage">
+            <p>Then to move the fingers to the frets, I use the </p>
+            <img src="bass/code3.PNG"  class="smallImage">
+            <p>Then I created a class to help me send the main carrage to specfic frets. The values of frets[] was created through testing the steps it takes to go to a fret.</p>
+            <img src="bass/code4.PNG"  class="smallImage">
+            <p>I then created a similar class for the fingers.</p>
+            <img src="bass/code5.PNG"  class="smallImage">
+            <img src="bass/code6.PNG"  class="smallImage">
+            <h5>Semi-final Look</h5>
+            <img src="bass/fullre.jpg"  class="largeImage">
+            <img src="bass/fullUp.jpg"  class="largeImage">
+            <img src="bass/fullUpperClose.jpg"  class="largeImage">
+            <P> This a video of me testing the priming step. You should see the main carrage moving across and then the individual fingers moving across. Sorry for the video quality.</P>
+            <center> 
+                <iframe width="840" height="473" src="https://www.youtube.com/embed/T7fnz-l8B9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </center>
+            <p>As you can see 3 of the other fingers are missing. My 3D printer completely stopped working so, I am trying to fix it, so there will still be more to see.</p>
+            <h5>Improvements I need to make</h5>
+            <div class="noIn"> 
+                <p>1. Get/make stronger solenoids. The current one is not strong enough to push the string down completely, so the sound is not as clear as I want it</p>
+                <p>2. Switch out certain parts for aluminum. The main pully system and carriage flex partially throw off the direction and causes the solanoid not to connect.  </p>
+                <p>3. Reprint some parts with a better 3D printer. Parts like the PVC pipe holder are either too large or small which causes the angling and wiggling of the railing </p>
+            </div> 
+            <br>
+            <br>
+            <a class="button button1" href="MechanicalDesign.html">Mechanical Design</a>
+            <a class="button button2" href="aiMachinelearning.html" >AI Mechanical Engineering</a>
+            <a class="button button3" href="electonics.html">Electronics</a>
+        </div>
+        <footer>
+            <div class="footer">
+                <h3>Porfolio</h3>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p> copyright &copy;2021 Niyanth Mahesh Porfolio. designed by Niyanth Mahesh</p>
+            </div>
+        </footer>
+        <script src="app.js">
+
+        </script>
+    </body>
+</html>

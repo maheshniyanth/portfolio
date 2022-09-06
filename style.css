@@ -136,19 +136,23 @@ body{
     line-height:2em;
     padding-top: 50px;
 }
-.introBody a{
-    position: absolute;
+ .resume{
+    position: static;
+    float: left;
+    margin-left: 10%;
+    margin-top: -13%;
+}
+.resume a{
     text-decoration: none;
     color: white;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #333a56;
-    top: 45%;
-    left: 11.5%;
+    font-size: 25px;
 }
-.introBody a:hover{
+.resume a:hover{
     background-color:#F7f5e6 ;
     color: black;
 }
@@ -157,6 +161,7 @@ body{
     color: aliceblue;
     font-size: 200%;
     padding: 4.65%;
+    padding-bottom: 1%;
     background-color: #333a56;
     border-color: #e8e8e8;
     border-top-style: solid;
@@ -164,9 +169,7 @@ body{
     border-width: 1%;
 }
 .secondTitle a{
-    position: fixed;
-    left: 49%;
-    top: 92%;
+    text-align: center;
     font-size: 60px;
     color: #e8e8e8;
 }
@@ -229,14 +232,12 @@ body{
     width: 250px;
     height:auto;
     object-fit: fit;
-    margin-left: 35px;
     border-radius: 20px;
 }
 .main .smallish{
     width: 300px;
     height:auto;
     object-fit: fit;
-    margin-left: 35px;
     border-radius: 20px;
 }
 .main a{
@@ -263,7 +264,8 @@ body{
 .innerBox{
     background-color: #333a56;
     height: 200px;
-    width: 900px;
+    margin-left: 12%;
+    width: 30%;
     border-color: #F7f5e6;
     border-style:groove;
     position:absolute;
@@ -394,6 +396,7 @@ body{
     font-size: 45px;
     margin-bottom: 40px;
     margin-top: -70px;
+    overflow-wrap: break-word;
 }
 
 .slide-data p{
@@ -421,7 +424,7 @@ body{
     background-image: url(OMNIfullslide.PNG);
 }
 .slide-2{
-    background-image: url(chess1.png);
+    background-image: url(bass/fullUp.jpg);
 }
 .slide-3{
     background-image: url(Spider/nowegitto.jpg);
@@ -663,7 +666,21 @@ footer{
     .introBody p{
         font-size: 15px;
     }
+    .slide-data p{
+        font-size: 16px;
+    }
+    .slide-data h1{
+        font-size: 30px;
+    }
     
+}
+@media screen and (max-width:850px) {
+    .slide-data p{
+        font-size: 13px;
+    }
+    .slide-data h1{
+        font-size: 24px;
+    }
 }
 @media screen and (max-width:930px) {
     .introBody{
@@ -671,49 +688,199 @@ footer{
     }
     .introBody p{
         font-size: 12px;
+        padding: 15px;
     }
-    
+    .Name{
+        margin-left: 40px;
+    }
 }
 @media screen and (max-width:1500px) {
     .Catagories{
         width: 60%;
     }
+    .Name{
+        margin-left: 10px;
+    }
     
 }
 @media screen and (max-width:788px) {
-    body{
-        visibility: hidden;
+    .Catagories .mainNav{
+        font-size: 12px;
     }
- .Catagories{
-     position: absolute;
-     right: 0px;
-     height: 92vh;
-     top: 8vh;
-     background-color: aliceblue;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     width: 50%;
-     transform: translateX(100%);
-     transition: transform 0.5s ease-in;
- }
-    .Catagories li{
-     opacity: 0;
+    .introBody{
+        height: 200px;
     }
-    .mobile{
-     display: block;
+    .introBody p{
+        font-size: 10px;
+        padding: 5px;
+    }
+    .active, .mainNav:hover{
+        padding: 12px 20px;
+        margin: -20px;
+    }
+    .slide-data p{
+        padding-top: 20px;
+        font-size: 11px;
+    }
+    .slide-data h1{
+        font-size: 24px;
+    }
+    .secondTitle{
+        font-size: 12px;
+    }
+    .s4 a{
+        font-size: 16px;
     }
 }
-.nav-active{
-    transform: translateX(0%);
-}
-@keyframes navLinkFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
+@media screen and (max-width:591px) {
+    .s4 a{
+        font-size: 10px;
+        padding:5px 15px;
+        margin-left: -5px;
     }
-    to{
-        opacity: 1;
-        transform: translateX(0px);
+}
+@media screen and (max-width:535px) {
+    .slide-data p{
+        padding-top: 20px;
+        font-size: 9px;
+    }
+    .slide-data h1{
+        font-size: 22px;
+    }
+    .front{
+        padding-bottom: 40%;
+    }
+    .active, .mainNav:hover{
+        padding: 12px 20px;
+        margin: -20px;
+    }
+    .introBody p{
+        font-size: 8px;
+        padding: 2px;
+    }
+    .home{
+        margin-left: -30px;
+    }
+    .projectTitle{
+        font-size: 20px;
+    }
+    .resume a{
+        font-size: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+@media screen and (max-width:425px) {
+    .slide-data p{
+        padding-top: 20px;
+        font-size: 7px;
+    }
+    .slide-data h1{
+        font-size: 18px;
+    }
+    .slide-data a{
+        font-size: 10px;
+    }
+    .resume a{
+        margin-top: -80px;
+    }
+    .slider .arrows{
+        font-size: 20px;
+    }
+    .slider .dots{
+        font-size: 6px;
+    }
+}
+@media screen and (max-width:1600px) {
+    .main img{
+        margin-left: 5px;
+        width: 400px;
+        margin-top: -25px;
+    }
+    .main p{
+        margin-right: 5px;
+        font-size: 18px;
+        margin-left: 50%;
+        margin-top: -25px;
+        margin-bottom: -30px;
+    }
+    .main a{
+        margin-right: 0px;
+        font-size: 17px;
+        margin-top: 10px;
+    }
+    .main .smallish img{
+        width: 200px;
+    }
+    .main .small img{
+        width: 150px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .main img{
+        margin-left: 5px;
+        width: 300px;
+    }
+    .main p{
+        text-indent: 0px;
+        margin-right: 5px;
+        font-size: 18px;
+        margin-left: 50%;
+    }
+    .main a{
+        margin-right: 0px;
+        font-size: 17px;
+    }
+}
+@media screen and (max-width:825px) {
+    .main img{
+        margin-left: 5px;
+        width: 250px;
+        margin-top: -25px;
+    }
+    .main p{
+        margin-right: 5px;
+        font-size: 14px;
+        margin-left: 60%;
+        margin-top: -25px;
+        margin-bottom: -30px;
+    }
+    .main a{
+        margin-right: 0px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    .main .smallish{
+        width: 200px;
+    }
+    .main .small{
+        width: 150px;
+    }
+}
+@media screen and (max-width:560px) {
+    .main img{
+        margin-left: 5px;
+        width: 175px;
+        margin-top: -25px;
+    }
+    .main p{
+        margin-right: 5px;
+        font-size: 14px;
+        margin-left: 60%;
+        margin-top: -25px;
+        margin-bottom: -30px;
+    }
+    .main a{
+        margin-right: 0px;
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    .main .smallish{
+        width: 150px;
+    }
+    .main .small{
+        width: 100px;
     }
 }
