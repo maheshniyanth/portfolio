@@ -66,49 +66,39 @@
             <img src="chess1.png" alt="Full View" class="oneImage">
             <h5  style="margin-top: 50px">Introduction</h5>
             <p>I was always interested in AI and learned a lot about neural networks and min-max algorithms. However, it was hard to implement these ideas without a proper game so I decided to create a python chess program. I specifically created a chess game over simpler games like checkers because I could experiment with more complex types of AI programs using my knowledge and skills in chess.</p>
+            <p>I was still new to using python to create a game so I used <a href="https://www.youtube.com/channel/UCaEohRz5bPHywGBwmR18Qww">this</a> youtube series to help with the basic template for the chess game.<strong>So, the code for the board creation is largely based off of the code in the video. I am showing some of it again here as context for the later Bot part.</strong> However, the later algorithms are my own code. </p>
             <h5>Creating the Game</h5>
             <h6>Board</h6>
-            <p>I began by creating the basic chess pattern of grey and white squares.</p>
+            <p>This is the code for creating the squares on the board. It draws a new rectangle and shifts its location and color based on the column and row numbers. </p>
             <img src="Chess/drawBoard.PNG" class="smallImage">
-            <p>I then created a 2d list which allowed me to easily switch out pieces that were very useful for creating alternate board setups to test end game algorithms later.</p>
+            <p>All of the piece information is stored in a 2d array that is later transformed into pieces. I am using a 2D array because it lowers the processing time for the bot and is easy to read.</p>
             <img src="Chess/boardArray.PNG" class="smallImage">
-            <p>Then based on that I mapped each string to an image which allowed all the pieces to show up in the order of the list.</p>
+            <p>Then based on the array each string is mapped to a png of that piece which allowed all the pieces to show up in the order of the list.</p>
             <img src="Chess/StrtoIMG.PNG" class="smallImage">
+            <p>So, at this point I have the piece location and the board is ready.</p>
+            <img src="" class="smallImage">
             <h5>Piece Movement</h5>
-            <p> These two functions control the movement of all the pieces allowing them to move to any square. It achieves this by editing the 2D list with the new location of the mouse.</p>
+            <p> These next two methods control the movement of all the pieces allowing them to move to any square. It achieves this by saving the array location of the first click and editing the 2D list with the location of the new click.</p>
             <img src="Chess/makeMove.PNG" class="smallImage">
             <img src="Chess/possibleMoves.PNG" class="smallImage">
-            <p>            These next couple of functions determine the moves for each kind of piece. It looks like every move matches with the set direction. The king has the same code as the bishop, but with added adjacent directions and a limit of one square per movement.</p>
+            <p>These functions then restrict the moves for each kind of piece by only editing the list when the click is on the correct square. This is done by using array position to determine adjacent and diagonal moves from the original piece. By separating these two functions it is easier to use these piece rules to control the bot. </p>
             <img src="Chess/BishopKingMoves.PNG" class="smallImage">
-            <p>The rook, knight, queen, and pawn then follow the same code, but with changed directions of movement.</p>
+            <p>This is what the code looks like to control the rook and knight moves.</p>
             <img src="Chess/rookKnightMoves.PNG" class="smallImage">
-            <p>ValidMove then further restricts moves by not allowing pieces to move when the king is in check unless it can block the check. If no moves exist then it is checkmate and the code stops.</p>
+            <p>ValidMove then further restricts moves by not allowing pieces to move when the king is in check and other restrictions. I can use this method along with the previous to define the rules for the bot.</p>
             <img src="Chess/validMove.PNG" class="smallImage">
-            <h5>Piece Interaction</h5>
-            <p>Because I already set the possible moves for each piece, highlighting the piece was easy. All I had to do was set the squares of the moves as yellow when the piece was selected.</p>
-            <img src="Chess/highLight.PNG" class="smallImage">
-            <img src="Chess/sqSel.PNG" class="smallerImage">
-            <p> <p>The code is set that If there is an empty and safe space between the king and the rook the code introduces a new king position that can be moved to. The castling is based on isCasteMove so I can set it to false when the king or rook is moved beforehand.</p>
-            <img src="Chess/castle.PNG" class="smallImage">
-            <p>This function translates the row and column moved into chess notation. It is not currently useful, but I want to try uploading several chess move sheets made by players to have them learn more abstract moves by reviewing the data.</p>
+            <p>This function translates the row and column moved into chess notation. This so so I can have an easy way to represent the bot's games.</p>
             <img src="Chess/notation.PNG" class="smallImage">
-            <p>Undo is very similar to the move function. All I had to do was reverse each of the movements using the old movement data that I saved. </p>
-            <img src="Chess/undo.PNG" class="smallImage">
-            <p>I ran the main move function into the animation function. The function works by slightly increasing the position of the pieces in every frame.</p>
-            <img src="Chess/animation.PNG" class="smallImage">
             <h5>Machine Learning</h5>
-            <p>This causes the bot to choose any available move randomly. It is used when it cannot find a move.</p>
+            <p>This causes the bot to choose any available move randomly by choosing one of the previously created available moves. It's used when it cannot find a move.</p>
             <img src="Chess/randomMove.PNG" class="smallImage">
-            <p>The function is the most important factor in deciding the bot's move. It uses a basic Min-Max algorithm to detect the best move which maximizes the bot's score while reducing the opponent's min score.</p>
+            <p>The function is the most important factor in deciding the bot's move. It uses a basic Min-Max algorithm to detect the best move which maximizes the bot's score while reducing the opponent's min score. I do this by finding all possible moves and creating individual boards for all of them and finding all moves in each of those scenarios. I repeat that until the bot can think 6 moves in advance and then I compare all the boards to find the most points the bot can get if the other player plays perfectly to find the correct move.</p>
             <img src="Chess/bestMove.PNG" class="smallImage">
-            <p>This function fins the total score on each side of the board, This is used to predict the best scoring move by detecting the score before and after.</p>
-            <img src="Chess/scoreAI.PNG" class="smallImage">
-            <p>As you can see in the video there is still a lot of improvement to be made. The random move works decently in the end game, but in the beginning, you can see that the king moved forward which is not a good move. It did not consider checking and it always took a better piece when offered which is not always the best move.</p>
+            <p>As you can see in the video there is still a lot of improvement to be made. The random move works decently in the end game, but in the beginning, you can see that the king moved forward which is not a good move. It also did not consider checking and it always took a better piece when offered which is not always the best move.</p>
             <center>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/URIsmyJgFjA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </center>
-            <p>I am still currently working on this project. I still want to introduce alpha-beta pruning so the code can quickly calculate several moves ahead. I also am currently adding more specific weights to each movement emphasizing openness, future moves, and common strategic positions.</p>
-            <a class="button button1" href="MechanicalDesign.html">Mechanical Design</a>
+            <p>I am still currently working on this project. I still want to introduce alpha-beta pruning so the code can quickly calculate several moves ahead. I also am currently adding more specific weights to each movement emphasizing openness, future moves, and common strategic positions.</p><a class="button button1" href="MechanicalDesign.html">Mechanical Design</a>
             <a class="button button2" href="aiMachinelearning.html" >AI Mechanical Engineering</a>
             <a class="button button3" href="electonics.html">Electronics</a>
         </div>
