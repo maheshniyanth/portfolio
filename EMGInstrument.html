@@ -48,8 +48,7 @@
                     <div class="dropdown">   
                         <ul>
                             <li><a href="MechanicalDesign.html">Mechanical Design</a></li>
-                            <li><a href="aiMachinelearning.html">AI/Machine Learning</a></li>
-                            <div class="electrical"><li><a href="electonics.html">Electronics</a></li></div>
+                            <li><a href="aiMachinelearning.html">CS and Electronics</a></li>
                         </ul>
                     </div>
                 </div>
@@ -65,23 +64,34 @@
             <h3>Electromyography Based Instrument / Rythm Game</h3>
             <img src="" alt="Full View" class="temp">
             <h5  style="margin-top: 50px">Introduction</h5>
-            <p>I first saw the surface electromyography sensors used in a prosthetic arm and I was amazed by the functionality that they could provide. Since then I have been interested in doing something with them. I also really love rhythm games, so I came up with a concept for the first audio-only rhythm game using these EMG pads.
+            <p>I first saw the surface electromyography sensors used in a prosthetic arm and I was amazed by the functionality that they could provide yet they were rarely used in any consumer products. Since then I have been interested in doing something with them. I also really love rhythm games, so I came up with a concept for the first audio-only rhythm game using these EMG pads.
             </p>
-            <p>I plan of creating a device that works by using several EMGs fitted into a wearable sleeve that goes on the forearm. It detects the movement and position of each of the fingers. It then connects via Bluetooth to a device where the app would allow the user to select the song and calibrate the device.</p>
-            <p>The user will know what to do based on varying notes played in the audio indicating what finger to use as well as shorthand standing for a variety of things such as repeating a set note pattern or holding a note.</p>
-            <p>The main aspect of this would be its portability. The lack of a screen allows the user to play it discreetly anywhere without looking away from what they are doing. </p>
-            <p><strong>This is probably going to be delayed for a while until I receive the backorder of these sensors.</strong></p>
+            <p>I plan of creating a device that works by using several EMGs fitted into a wearable sleeve that goes on the forearm. These sensors then detect the movements and taps of individual fingers using data processing from the Arduino. A headphone jack and a small buzzer are also connected for communication to the user.</p>
+            <p>The user will know what to do based on varying notes added to the audio indicating what finger to use as well as shorthand standing for a variety of things such as repeating a set note pattern or holding a note.</p>
+            <p>The main aspect of this would be its portability. The lack of a screen allows the user to play it discreetly anywhere without looking away from what they are doing. This gives it more easy to use over mobile game although it will cost more. </p>
             <h5>Research</h5>
             <p>I knew very little about these sensors other than the fact that they were imprecise at tracking finger movement, so I had a lot of research ahead of me to try and find appropriate ways to interpret the data mostly coming from these papers.</p>
+            <p>Note: Most of these use 16 or so sensors on an arm while I am only using 2 (because they are expensive) so the data will alter slightly.</p>
             <p>Kerber F., Puhl M., & Kruger A.(2017, September) User-Independent Real-Time Hand Gesture Recognition Based on Surface Electromyography. Retrieved from https://dl.acm.org/doi/abs/10.1145/3098279.3098553</p>
             <p>Tang X., Lui Y., Lv C.,& Sun D. (2012, January) Hand Motion Classification Using a Multi-Channel Surface Electromyography Sensor. Retrieved from https://www.mdpi.com/1424-8220/12/2/1130</p>
             <p>Zhang Y. & Harrison C. (2015 November) Tomo: Wearable, Low-Cost Electrical Impedance Tomography for Hand Gesture Recognition. Retrieved from https://dl.acm.org/doi/10.1145/2807442.2807480 </p>
+            <div class="noIn"> 
+                <p>I got a lot of important information from these sources:</p>
+                <p>1. The mean return value correlates with the strenght exerted. (May seem obious)</p>
+                <p>2. Switch out the extruder and tip so I don't need to rely on the recycled filament and can use PLA.  </p>
+                <p>3. Make it upgradable by switching out the main controller for an Arduino so I can add my own components. </p>
+            </div>  
+            <h5>Starting out</h5>
+            <p>This is what the two sensors recieve as I flex my arm. As you can see it is horribly imprecisse.</p>
+            <center> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZHv1m-iWAVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </center>
+            <p>I need to make a lot of transformations in the data so I am importing it to Python and using the numPy library.</p>
             <br>
             <br>
             <br>
             <a class="button button1" href="MechanicalDesign.html">Mechanical Design</a>
-            <a class="button button2" href="aiMachinelearning.html" >AI Mechanical Engineering</a>
-            <a class="button button3" href="electonics.html">Electronics</a>
+            <a class="button button2" href="aiMachinelearning.html" >CS and Electronics</a>
         </div>
         <footer>
             <div class="footer">
