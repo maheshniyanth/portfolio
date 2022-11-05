@@ -64,7 +64,8 @@
             <h3>Robotic Hand / Prosthetic</h3>
             <img src="RoboticArm/FRONThAND.png" alt="Full View" class="oneImage">
             <h5  style="margin-top: 50px">Introduction</h5>
-            <p>I wanted to try to create a new design for a prosthetic hand that has more degrees of freedom and strength than the most common types of prosthetic hands. Although this does not look nearly as good and is significantly larger than the current prosthetic hands being sold. </p>
+            <p>I wanted to try to create a new design for a prosthetic hand that has more degrees of freedom and strength than the most common types of prosthetic hands. Although this does not look nearly as good and is significantly larger, I will continue to improve the design in new versions. </p>
+            <p>There will also be an added Emg sensor block that detects electrical signals from the muscles and transforms their hand movements. This allows the hand to connect directly through the arm and function like an actual prosthetic.</p>
             <h5  style="margin-top: 50px">Finger Design</h5>
             <img src="RoboticArm/fingerSide.PNG" class="largeImage">
             <img src="RoboticArm/fingerSide2.PNG" class="largeImage">
@@ -87,10 +88,10 @@
             <p class="bottomText">These rollers.</p>
             <img src="RoboticArm/slotCloseUp.PNG" class="smallImage">
             <img src="RoboticArm/SpoolAligner.PNG" class="smallImage">
-            <p class="bottomText">A close up view of the pully motor.</p>
+            <p class="bottomText">A close-up view of the pully motor.</p>
             <h5  style="margin-top: 50px">Hand Design</h5>
             <img src="RoboticArm/handBack.PNG" class="largeImage">
-            <p>Each of the fingers is connected by this rod going through both finger parts.  </p>
+            <p>Each of the fingers are connected by this rod going through both finger parts.  </p>
             <img src="RoboticArm/fingerConnec.PNG" class="smallImage">
             <p>The thumb then connects similarly.</p>
             <img src="RoboticArm/thumb1.PNG" class="smallImage">
@@ -98,14 +99,20 @@
             <img src="RoboticArm/handSide.PNG" class="largeImage">
             <img src="RoboticArm/side2.PNG" class="largeImage">
             <img src="RoboticArm/wideHand.PNG" class="largeImage">
-            <p>As seen the hand has a few problems in both look and functionality. First of all, it is really wide (about 2.9 in more than average) and does not have the normal hand shape with the fingers tilting towards the center of the hand. This is because the current motors I am using take up a lot of space, so I am currently trying to find a better alternative. The main functionality concern is that due to the wide hand the tumb has lost a lot of purpose. I plan to fix this along with the wideness issue.  </p>
-            <p>I am still waiting for EMG sensors and the 3D printer to test out the hand in a realistic scenario.</p>
+            <p>As seen the hand has a few problems in both look and functionality. First of all, it is really wide (about 2.9 in more than average) and does not have the normal hand shape with the fingers tilting towards the center of the hand. This is because the current motors I am using take up a lot of space, so I am currently trying to find a better alternative. The main functionality concern is that due to the wide hand the tumb has lost a lot of purposes. I plan to fix this along with the wideness issue.  </p>
             <h5>Strength Calculations</h5>
             <p>For the materials, I am planning to have it mostly 3D printed with the important parts such as the fingertips and connectors being aluminum. The stepper motors make up a large percentage of the weight, but I can't find a better and cheaper alternative, so I'll calculate the weight including them for now. </p>
             <p>Rough estimates lead to about 4.1 pounds for the electrical components and 7.3 pounds for the materials for a total of about 11.4 pounds which is a lot. However, because the fingers are completely 3D printed I am considering the weight to be negligible.</p>
-            <p>For the first finger section the two springs have a force of 24.909N together (calculated for each spring by using Hooks law and multiplying 700.47N/M by 0.0178M). The motor has a torque of 13Ncm and is connected to a 1:8 ratio gearbox making it 104Ncm. It is hooked up to a .5in pully belt making it 81.89N for each motor. Calculating in leverage the total grip strength would be around <strong>94.077N or 21.149 pounds per finger </strong>For context the average person's grip strength is around 75N per finger so it's a close match.</p>
+            <p>For the first finger section the two springs have a force of 24.909N together (calculated for each spring by using Hooks law and multiplying 700.47N/M by 0.0178M). The motor has a torque of 13Ncm and is connected to a 1:8 ratio gearbox making it 104Ncm. It is hooked up to a .5 pully belt making it 81.89N for each motor. Calculating in leverage the total grip strength would be around <strong>94.077N or 21.149 pounds per finger </strong>For context the average person's grip strength is around 75N per finger so it's a close match.</p>
+            <h5>Setting up the EMGs</h5>
+            <p>Using the Emg sensors and part of the code from my rhythm game project I can have the finger movement in an actual hand connect to the movement of a prosthetic hand. The sEMGs strap onto the arm and can detect electrical signals from the muscles whenever they contract. </p>
+            <img src="EMGRythm/handMain.jpg" class="largeImage">
+            <p>I can use the same code, but I need to add additional recognition for the splay and the secondary finger movement. I also need to add a feature where it moves the fingers only a percentage rather than a complete tap</p>
+            <p>I can add the additional features by creating 5 new linear regression models for the new movements.</p>
+            <img src="" class="largeImage">
+            <p>After some testing I saw that the EMG values remain somewhat constant when a finger is moving. This means that I can set the prosthetic finger to keep its velocity whenever the EMG values remain the same. It will cause eventual miss alignment, but this is the closest I can get with these sensors.</p>
             <h5>Future Plans</h5>
-            <p>I am still waiting to get my EMG sensors to try this out as a prosthetic hand, but I will update this page with a working hand when I do.</p>
+            <p>I am still trying to fix my 3D printer to test out the hand in a realistic scenario.</p>
             <br>
             <br>
             <br>
