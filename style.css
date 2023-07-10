@@ -53,8 +53,8 @@ nav{
 .active, .mainNav:hover{
     background-color: #333a56;
     color: white;
-    padding: 20px 40px;
-    margin: -40px;
+    padding: 15px 28px;
+    margin: -28px;
     border-radius: 6px;
 }
 .dropdown{
@@ -103,6 +103,13 @@ nav{
 body{
     background-image: linear-gradient(#a3a3a37e, #ddddddd8);
     overflow-x:hidden;
+}
+.porfPage{
+    background-color: #52658f9f;
+    margin-top: -15px;
+}
+.portfolioTitle{
+    padding-top: 25px;
 }
 .front{
     padding-bottom: 20%;
@@ -178,10 +185,10 @@ body{
 }
 .projectType{
     text-align: center;
-    font-size: 500%;
-    padding-top: 30px;
+    font-size: 300%;
+    padding-top: 20px;
     background-color: #333a56;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     margin-bottom: -10px;
     color: white;
     border-style: solid;
@@ -263,13 +270,13 @@ body{
 }
 .innerBox{
     background-color: #333a56;
-    height: 200px;
+    height: 300px;
     margin-left: 12%;
     width: 30%;
     border-color: #F7f5e6;
     border-style:groove;
     position:absolute;
-    top: 40%;
+    top: 35%;
     left:25%;
     box-shadow: 10px 10px 5px rgb(0, 0, 0);
 }
@@ -700,6 +707,11 @@ footer{
     }
     .Name{
         margin-left: 10px;
+    }
+    .innerBox{
+        width: 70%;
+        margin-left: 0%;
+        left: 15%;
     }
     
 }
